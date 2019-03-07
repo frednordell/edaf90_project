@@ -1,6 +1,10 @@
 div.apartment {
-background-image: url("lagenhet.jpg");
-height: 100vh;
+	background-image: url("lagenhet.jpg");
+	height: 100vh;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
 }
 
 div.textcontainer{

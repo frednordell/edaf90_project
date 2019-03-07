@@ -31,6 +31,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { KlagaComponent } from './klaga/klaga.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilterByTagsPipe } from './filter-by-tags.pipe';
+import { InternationalComponent } from './international/international.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FilterByTagsPipe } from './filter-by-tags.pipe';
     LandingPageComponent,
     KlagaComponent,
     FooterComponent,
-    FilterByTagsPipe
+    FilterByTagsPipe,
+    InternationalComponent
   ],
   imports: [
     BrowserModule,
