@@ -25,6 +25,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatSidenavModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { LinksSectionComponent } from './links-section/links-section.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { KlagaComponent } from './klaga/klaga.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -39,6 +41,7 @@ import { FooterComponent } from './footer/footer.component';
     TopBarComponent,
     LinksSectionComponent,
     LandingPageComponent,
+    KlagaComponent,
     FooterComponent
   ],
   imports: [
@@ -59,9 +62,11 @@ import { FooterComponent } from './footer/footer.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCyC93bo2IxBifjOMWrgDR_wSQKm5lGG0M'
     }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

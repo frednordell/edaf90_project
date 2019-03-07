@@ -4,13 +4,14 @@ import { BoendeComponent } from './boende/boende.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NollningComponent } from './nollning/nollning.component';
 import { PluggComponent } from './plugg/plugg.component';
+import { KlagaComponent } from './klaga/klaga.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'boende', component: BoendeComponent },
   { path: 'plugg', component: PluggComponent },
-  { path: 'nollning', component: BoendeComponent }
-  
+  { path: 'nollning', component: NollningComponent },
+  { path: 'klaga', component: KlagaComponent }
 
 ];
 
