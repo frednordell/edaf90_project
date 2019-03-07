@@ -21,6 +21,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from'@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatSidenavModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { LinksSectionComponent } from './links-section/links-section.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -45,6 +46,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    MatAutocompleteModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,

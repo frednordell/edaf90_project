@@ -2,6 +2,9 @@
 	<h3 class="mat-display-3">Bra att ha länkar</h3>
 	<div fxLayout="column" fxLayoutAlign=" center">
 		<p>Autocompete</p>
+		<mat-form-field>
+  		<input type="text" matInput [formControl]="myControl">
+		</mat-form-field>
 		<div fxLayout="row wrap" fxFlex.md="70" class="card-deck-container">
        <div fxFlex *ngFor="let company of companies" class="card-item">
          <mat-card class="company-card">
