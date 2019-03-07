@@ -11,6 +11,7 @@ import { PluggComponent } from './plugg/plugg.component';
 import { BoendeComponent } from './boende/boende.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
+import { AgmCoreModule } from '@agm/core';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -19,6 +20,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { LinksSectionComponent } from './links-section/links-section.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -31,7 +33,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     BoendeComponent,
     TopBarComponent,
     LinksSectionComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCyC93bo2IxBifjOMWrgDR_wSQKm5lGG0M'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

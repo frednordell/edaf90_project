@@ -1,0 +1,26 @@
+<div fxLayout="row" class="footer" fxLayoutAlign=" start">
+  <span fxFlex="20"></span>
+  <div fxLayout="column" fxLayoutAlign="start start">
+    <h2 class="mat-headline">Hitta oss</h2>
+    <p class="mat-subheading-1">Adress</p>
+    <p class="mat-body-1">Ole Römers väg 3,</p>
+    <p class="mat-body-1">223 63 Lund</p>
+    <p class="mat-body-1">Box: 118, 221 00 Lund</p>
+  </div>
+  <span fxFlex="5"></span>
+  <div fxFlex fxLayout="column">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [streetViewControl]="false">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+  </div>
+  <span fxFlex="5"></span>
+  <div fxLayout="column" fxLayoutAlign="start start">
+    <h2 class="mat-headline">Kontakt</h2>
+    <p class="mat-body-1">Tel: +46-285 94 14</p>
+    <p class="mat-body-1">Mail:<a href="mailto:styrelsen@dsek.se">styrelsen@dsek.se</a></p>
+
+    <p class="mat-body-1">D-chip: <a href="mailto:styrelsen@dchip.se">styrelsen@dchip.se</a></p>
+    <p class="mat-body-1">Bankgiro: </p>
+  </div>
+  <span fxFlex="20"></span>
+</div>
