@@ -1,10 +1,24 @@
 <div class="links-section section" fxLayout="column" fxLayoutAlign=" center">
 	<h3 class="mat-display-3">Bra att ha länkar</h3>
 	<div fxLayout="column" fxLayoutAlign=" center">
-		<p>Autocompete</p>
-		<mat-form-field>
-  		<input type="text" matInput [formControl]="myControl">
+		<div fxLayout="row">
+			<mat-icon style="text-align: center;">search</mat-icon>
+			<mat-form-field class="example-chip-list">
+		    <mat-chip-list #chipList>
+		        <mat-chip *ngFor="let tag of tags;let indx=index;" [selectable]="selectable" [removable]="removable" (removed)="remove(tag,indx)">
+		            {{tag.name}}
+		            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+		        </mat-chip>
+		        <input [placeholder]="placeholder" #tagInput [formControl]="tagCtrl" [matAutocomplete]="auto" [matChipInputFor]="chipList"
+		         [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+		    </mat-chip-list>
+		    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+		        <mat-option *ngFor="let tag of filteredTags | async" [value]="tag">
+		            {{tag.name}}
+		        </mat-option>
+		    </mat-autocomplete>
 		</mat-form-field>
+		</div>
 		<div fxLayout="row wrap" fxFlex.md="70" class="card-deck-container">
        <div fxFlex *ngFor="let company of companies" class="card-item">
          <mat-card class="company-card">
