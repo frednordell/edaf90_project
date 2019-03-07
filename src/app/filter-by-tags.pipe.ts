@@ -7,7 +7,7 @@ export class FilterByTagsPipe implements PipeTransform {
 
   transform(items, tags): any {
         var filtered = []; // Put here only items that match
-        console.log(items)
+        /*console.log(items)
         console.log(tags)
         (items || []).forEach(function (item) { // Check each item
             var matches = tags.some(function (tag) {          // If there is some tag
@@ -16,7 +16,7 @@ export class FilterByTagsPipe implements PipeTransform {
             if (matches) {           // If it matches
                 filtered.push(item); // put it into the `filtered` array
             }
-        });
+        });*/
         return filtered; // Return the array with items that match any tag
     };
 }
