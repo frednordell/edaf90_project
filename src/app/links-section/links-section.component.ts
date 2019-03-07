@@ -1,5 +1,5 @@
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent, MatChipInputEvent } from '@angular/material';
 import { Observable } from 'rxjs';
@@ -11,6 +11,28 @@ import { map, startWith } from 'rxjs/operators';
   styleUrls: ['./links-section.component.scss']
 })
 export class LinksSectionComponent implements OnInit {
+	companies = [
+		{
+			name: "KFS",
+			url: "kfs.se",
+			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
+			pictureUrl: "kfs.se/nångot",
+			tags: [
+				"plugg",
+				"fest"
+			]
+		},
+		{
+			name: "KFS",
+			url: "kfs.se",
+			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
+			pictureUrl: "kfs.se/nångot",
+			tags: [
+				"plugg",
+				"boende"
+			]
+		}
+	];
 
 	visible = true;
   selectable = true;
@@ -23,48 +45,24 @@ export class LinksSectionComponent implements OnInit {
   allTags: any = [
     {
       id: 1,
-      name: 'Boende'
+      name: 'boende'
     },
     {
       id: 2,
-      name: 'Fest'
+      name: 'fest'
     },
     {
       id: 3,
-      name: 'Skola'
+      name: 'skola'
     },
     {
       id: 4,
-      name: 'Övrigt'
+      name: 'övrigt'
     }
   ];
 
   @ViewChild('tagInput') tagInput: ElementRef;
-
-
 	placeholder = "Filtrera på taggar"
-	companies = [
-		{
-			name: "KFS",
-			url: "kfs.se",
-			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot",
-			tags: [
-				"Plugg",
-				"Fest"
-			]
-		},
-		{
-			name: "KFS",
-			url: "kfs.se",
-			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot",
-			tags: [
-				"Plugg",
-				"Boende"
-			]
-		}
-	];
 
   constructor() {
   	this.filteredTags = this.tagCtrl.valueChanges.pipe(
@@ -76,11 +74,11 @@ export class LinksSectionComponent implements OnInit {
    add(event: MatChipInputEvent): void {
     const input = event.input;
     const value = event.value;
-    // Add our fruit
+    // Add our tag
     if ((value || '').trim()) {
       this.tags.push({
           id:Math.random(),
-          name:value.trim()
+          name:value.trim().toLowerCase()
       });
     }
 
@@ -102,8 +100,12 @@ export class LinksSectionComponent implements OnInit {
     this.tagCtrl.setValue(null);
   }
 
-  private _filter(value: any): string[] {
-    return this.allTags.filter(tag => tag.id === value.id);
+  private _filter(value: any): any[] {
+  	const name = value.name || value
+    return this.allTags.filter(tag => tag.name.toLowerCase().includes(name.toLowerCase()));;
+  }
+
+  ngOnInit() {
   }
 
 }

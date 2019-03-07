@@ -30,6 +30,7 @@ import { LinksSectionComponent } from './links-section/links-section.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { KlagaComponent } from './klaga/klaga.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FilterByTagsPipe } from './filter-by-tags.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LinksSectionComponent,
     LandingPageComponent,
     KlagaComponent,
-    FooterComponent
+    FooterComponent,
+    FilterByTagsPipe
   ],
   imports: [
     BrowserModule,
