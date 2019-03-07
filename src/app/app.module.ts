@@ -12,10 +12,16 @@ import { BoendeComponent } from './boende/boende.component';
 import { TriIconsComponent } from './tri-icons/tri-icons.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
+import { AgmCoreModule } from '@agm/core';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from'@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { LinksSectionComponent } from './links-section/links-section.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +30,15 @@ import {MatButtonModule} from'@angular/material/button';
     NollningComponent,
     PluggComponent,
     BoendeComponent,
+<<<<<<< HEAD
     TriIconsComponent,
     TopBarComponent
+=======
+    TopBarComponent,
+    LinksSectionComponent,
+    LandingPageComponent,
+    FooterComponent
+>>>>>>> e4423f53999e1c0f1f9002523d139e824f55e23d
   ],
   imports: [
     BrowserModule,
@@ -34,7 +47,16 @@ import {MatButtonModule} from'@angular/material/button';
     FlexLayoutModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCyC93bo2IxBifjOMWrgDR_wSQKm5lGG0M'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
