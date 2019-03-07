@@ -19,6 +19,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { LinksSectionComponent } from './links-section/links-section.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { KlagaComponent } from './klaga/klaga.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -31,7 +33,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     BoendeComponent,
     TopBarComponent,
     LinksSectionComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    KlagaComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
