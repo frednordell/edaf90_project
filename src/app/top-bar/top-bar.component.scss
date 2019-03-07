@@ -1,0 +1,15 @@
+.top-menu {
+  top: 0px;
+  color: #ffffff !important;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  .mat-button {
+      text-transform: uppercase;
+  }
+  .home-button {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    color: #f280a1;
+  }
+}

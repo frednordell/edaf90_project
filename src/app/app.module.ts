@@ -9,6 +9,14 @@ import { StartComponent } from './start/start.component';
 import { NollningComponent } from './nollning/nollning.component';
 import { PluggComponent } from './plugg/plugg.component';
 import { BoendeComponent } from './boende/boende.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from'@angular/material/button';
+
+
 
 @NgModule({
   declarations: [
@@ -16,13 +24,17 @@ import { BoendeComponent } from './boende/boende.component';
     StartComponent,
     NollningComponent,
     PluggComponent,
-    BoendeComponent
+    BoendeComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
