@@ -11,20 +11,25 @@ import { PluggComponent } from './plugg/plugg.component';
 import { BoendeComponent } from './boende/boende.component';
 import { TriIconsComponent } from './tri-icons/tri-icons.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 import { AgmCoreModule } from '@agm/core';
 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from'@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatSidenavModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { LinksSectionComponent } from './links-section/links-section.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { KlagaComponent } from './klaga/klaga.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -44,14 +49,19 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatInputModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    MatAutocompleteModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatFormFieldModule,
     LayoutModule,
+    MatChipsModule,
     MatSidenavModule,
     MatListModule,
+    MatGridListModule,
     MatCardModule,
     MatTableModule,
     MatPaginatorModule,

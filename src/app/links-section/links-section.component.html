@@ -1,22 +1,44 @@
-<div class="section" fxLayout="column" fxLayoutAlign="center center">
+<div class="links-section section" fxLayout="column" fxLayoutAlign=" center">
 	<h3 class="mat-display-3">Bra att ha länkar</h3>
-	<div fxLayout="column" fxLayoutAlign="center center">
-		<p>Autocompete</p>
-		<div fxLayout="row" gdAlignColumns="start stretch">
-			<mat-card class="company-card" *ngFor="let company of companies">
-				<mat-card-header>
-				  <mat-card-title>{{company.name}}</mat-card-title>
-				</mat-card-header>
-				<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-				<mat-card-content>
-				    <p>
-				      {{company.text}}
-				    </p>
-				  </mat-card-content>
-				  <mat-card-actions>
-				    <a mat-button href={{company.url}}>Link</a>
-				  </mat-card-actions>
-			</mat-card>
+	<div fxLayout="column" fxLayoutAlign=" center">
+		<div fxLayout="row">
+			<mat-icon style="text-align: center;">search</mat-icon>
+			<mat-form-field class="example-chip-list">
+		    <mat-chip-list #chipList>
+		        <mat-chip *ngFor="let tag of tags;let indx=index;" [selectable]="selectable" [removable]="removable" (removed)="remove(tag,indx)">
+		            {{tag.name}}
+		            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+		        </mat-chip>
+		        <input [placeholder]="placeholder" #tagInput [formControl]="tagCtrl" [matAutocomplete]="auto" [matChipInputFor]="chipList"
+		         [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+		    </mat-chip-list>
+		    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+		        <mat-option *ngFor="let tag of filteredTags | async" [value]="tag">
+		            {{tag.name}}
+		        </mat-option>
+		    </mat-autocomplete>
+		</mat-form-field>
 		</div>
+		<div fxLayout="row wrap" fxFlex.md="70" class="card-deck-container">
+       <div fxFlex *ngFor="let company of companies" class="card-item">
+         <mat-card class="company-card">
+	  			<mat-card-header>
+	  			  <mat-card-title>{{company.name}}</mat-card-title>
+	  			  <span fxFlex></span>
+	  			  <mat-chip-list>
+  						<mat-chip *ngFor="let tag of company.tags">{{tag}}</mat-chip>
+						</mat-chip-list>
+	  			</mat-card-header>
+	  			<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+	  			<mat-card-content>
+	  			    <p>
+	  			      {{company.text}}
+	  			    </p>
+  			  </mat-card-content>
+  			  <mat-card-actions>
+  			    <a mat-button href={{company.url}}>Link</a>
+  			  </mat-card-actions>
+	  		</mat-card>
+       </div>
 	</div>
 </div>
