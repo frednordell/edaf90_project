@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BoendeComponent implements OnInit {
 
   constructor() { }
-
+  
   ngOnInit() {
   }
 
