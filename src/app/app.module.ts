@@ -9,6 +9,7 @@ import { StartComponent } from './start/start.component';
 import { NollningComponent } from './nollning/nollning.component';
 import { PluggComponent } from './plugg/plugg.component';
 import { BoendeComponent } from './boende/boende.component';
+import { TriIconsComponent } from './tri-icons/tri-icons.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
 import { AgmCoreModule } from '@agm/core';
@@ -23,8 +24,6 @@ import { LinksSectionComponent } from './links-section/links-section.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FooterComponent } from './footer/footer.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,10 +31,15 @@ import { FooterComponent } from './footer/footer.component';
     NollningComponent,
     PluggComponent,
     BoendeComponent,
+<<<<<<< HEAD
+    TriIconsComponent,
+    TopBarComponent
+=======
     TopBarComponent,
     LinksSectionComponent,
     LandingPageComponent,
     FooterComponent
+>>>>>>> e4423f53999e1c0f1f9002523d139e824f55e23d
   ],
   imports: [
     BrowserModule,
