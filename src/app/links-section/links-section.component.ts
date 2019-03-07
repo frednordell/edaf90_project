@@ -11,49 +11,21 @@ export class LinksSectionComponent implements OnInit {
 			name: "KFS",
 			url: "kfs.se",
 			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot"
+			pictureUrl: "kfs.se/nångot",
+			tags: [
+				"Plugg",
+				"Fest"
+			]
 		},
 		{
 			name: "KFS",
 			url: "kfs.se",
 			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot"
-		},
-		{
-			name: "KFS",
-			url: "kfs.se",
-			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot"
-		},
-		{
-			name: "KFS",
-			url: "kfs.se",
-			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot"
-		},
-		{
-			name: "KFS",
-			url: "kfs.se",
-			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot"
-		},
-		{
-			name: "KFS",
-			url: "kfs.se",
-			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot"
-		},
-		{
-			name: "KFS",
-			url: "kfs.se",
-			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot"
-		},
-		{
-			name: "KFS",
-			url: "kfs.se",
-			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot"
+			pictureUrl: "kfs.se/nångot",
+			tags: [
+				"Plugg",
+				"Boende"
+			]
 		}
 	];
 

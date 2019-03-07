@@ -14,6 +14,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 
 import { AgmCoreModule } from '@agm/core';
 
+import {MatChipsModule} from '@angular/material/chips';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
@@ -48,6 +49,7 @@ import { FooterComponent } from './footer/footer.component';
     MatIconModule,
     MatButtonModule,
     LayoutModule,
+    MatChipsModule,
     MatSidenavModule,
     MatListModule,
     MatGridListModule,

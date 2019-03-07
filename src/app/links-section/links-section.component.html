@@ -7,16 +7,20 @@
          <mat-card class="company-card">
 	  			<mat-card-header>
 	  			  <mat-card-title>{{company.name}}</mat-card-title>
+	  			  <span fxFlex></span>
+	  			  <mat-chip-list>
+  						<mat-chip *ngFor="let tag of company.tags">{{tag}}</mat-chip>
+						</mat-chip-list>
 	  			</mat-card-header>
 	  			<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
 	  			<mat-card-content>
 	  			    <p>
 	  			      {{company.text}}
 	  			    </p>
-	  			  </mat-card-content>
-	  			  <mat-card-actions>
-	  			    <a mat-button href={{company.url}}>Link</a>
-	  			  </mat-card-actions>
+  			  </mat-card-content>
+  			  <mat-card-actions>
+  			    <a mat-button href={{company.url}}>Link</a>
+  			  </mat-card-actions>
 	  		</mat-card>
        </div>
 	</div>
