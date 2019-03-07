@@ -9,10 +9,13 @@ import { StartComponent } from './start/start.component';
 import { NollningComponent } from './nollning/nollning.component';
 import { PluggComponent } from './plugg/plugg.component';
 import { BoendeComponent } from './boende/boende.component';
+import { TriIconsComponent } from './tri-icons/tri-icons.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
+import { AgmCoreModule } from '@agm/core';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from'@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -21,8 +24,7 @@ import { LinksSectionComponent } from './links-section/links-section.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { KlagaComponent } from './klaga/klaga.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     NollningComponent,
     PluggComponent,
     BoendeComponent,
+    TriIconsComponent,
+    TopBarComponent,
     TopBarComponent,
     LinksSectionComponent,
     LandingPageComponent,
-    KlagaComponent
+    KlagaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -47,10 +52,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     LayoutModule,
     MatSidenavModule,
     MatListModule,
+    MatCardModule,
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCyC93bo2IxBifjOMWrgDR_wSQKm5lGG0M'
+    }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

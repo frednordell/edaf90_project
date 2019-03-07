@@ -1,0 +1,31 @@
+.footer {
+  agm-map {
+    height: 150px;
+    width: 100%;
+  }
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  background-color: lighten(black, 30);
+  color: white;
+  .footer-icon {
+    height: 64px;
+    width: auto;
+  }
+  a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .mat-headline {
+    color: lighten(black, 70);
+  }
+  .mat-subheading-1 {
+    font-weight: bolder;
+    margin: 0;
+  }
+  .mat-body-1 {
+    a {
+      color: inherit;
+    }
+    margin: 0;
+  }
+}
