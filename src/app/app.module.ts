@@ -10,6 +10,12 @@ import { NollningComponent } from './nollning/nollning.component';
 import { PluggComponent } from './plugg/plugg.component';
 import { BoendeComponent } from './boende/boende.component';
 import { TriIconsComponent } from './tri-icons/tri-icons.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from'@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,13 +24,17 @@ import { TriIconsComponent } from './tri-icons/tri-icons.component';
     NollningComponent,
     PluggComponent,
     BoendeComponent,
-    TriIconsComponent
+    TriIconsComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
