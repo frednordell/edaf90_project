@@ -12,7 +12,7 @@ import { BoendeComponent } from './boende/boende.component';
 @NgModule({
   declarations: [
     AppComponent,
-    StartComponent
+    StartComponent,
     NollningComponent,
     PluggComponent,
     BoendeComponent
