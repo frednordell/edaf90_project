@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 
 
 @Component({
@@ -8,26 +8,21 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
   styleUrls: ['./klaga.component.scss']
 })
 export class KlagaComponent implements OnInit {
-  contactForm: FormGroup;
-  errends = ['Sexuelt ofredad', 'Germany', 'Italy', 'France'];
-  requestTypes = ['Claim', 'Feedback', 'Help Request'];
-
-  constructor(private formBuilder: FormBuilder) {
-    this.contactForm = this.createFormGroup();
-  }
-
-  createFormGroup() {
-    return new FormGroup({
-      personalData: new FormGroup({
-        name: new FormControl(),
-        errend: new FormControl(),
-        mail: new FormControl()
-      }),
-      requestType: new FormControl(),
-      text: new FormControl()
+  signupForm: FormGroup;
+  names: string = "";
+  errends: string = "";
+  mails: string = "";
+  constructor(private frmbuilder: FormBuilder) {
+    this.signupForm = frmbuilder.group({
+      name: new FormControl(),
+      errend: new FormControl(),
+      mail: new FormControl()
     });
   }
   ngOnInit() {
+  }
+  PostData(signupForm: NgForm) {
+    console.log(signupForm.controls);
   }
 
 }
