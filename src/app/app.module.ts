@@ -18,6 +18,7 @@ import {MatButtonModule} from'@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { LinksSectionComponent } from './links-section/links-section.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 
@@ -29,7 +30,8 @@ import { LinksSectionComponent } from './links-section/links-section.component';
     PluggComponent,
     BoendeComponent,
     TopBarComponent,
-    LinksSectionComponent
+    LinksSectionComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
