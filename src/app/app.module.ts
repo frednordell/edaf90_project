@@ -8,6 +8,7 @@ import { StartComponent } from './start/start.component';
 import { NollningComponent } from './nollning/nollning.component';
 import { PluggComponent } from './plugg/plugg.component';
 import { BoendeComponent } from './boende/boende.component';
+import { TriIconsComponent } from './tri-icons/tri-icons.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BoendeComponent } from './boende/boende.component';
     StartComponent,
     NollningComponent,
     PluggComponent,
-    BoendeComponent
+    BoendeComponent,
+    TriIconsComponent
   ],
   imports: [
     BrowserModule,
