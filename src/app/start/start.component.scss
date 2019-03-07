@@ -1,0 +1,20 @@
+.landing-banner {
+  min-height: 85vh;
+  top: 0px;
+  z-index: -100000;
+  background: url(../../assets/staben15.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.intro-title {
+  color: #ffffff;
+}
+
+.intro-title.top {
+  text-transform: uppercase;
+  margin-top: 0.68em;
+  margin-bottom: 0px
+}
