@@ -31,15 +31,12 @@ import { FooterComponent } from './footer/footer.component';
     NollningComponent,
     PluggComponent,
     BoendeComponent,
-<<<<<<< HEAD
     TriIconsComponent,
-    TopBarComponent
-=======
+    TopBarComponent,
     TopBarComponent,
     LinksSectionComponent,
     LandingPageComponent,
     FooterComponent
->>>>>>> e4423f53999e1c0f1f9002523d139e824f55e23d
   ],
   imports: [
     BrowserModule,
