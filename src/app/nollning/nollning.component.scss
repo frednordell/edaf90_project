@@ -1,13 +1,14 @@
-div.nollning {
+div.picture {
 	background-image: url("nollning.jpg");
-	height: 100vh;
-	width: 50vW;
+   background-position: center top;
+  height: 50vh;
+	width: 100vW;
 }
 
 div.textcontainernollning{
-  background-color: rgba(230,230,230,0.7);
-  width: 70vw;
-  height:100vh;
-  display: block;
-  margin: auto;
+  background-color: rgba(255,255,255,1);
+  width: 100vw;
+  height:50vh;
+  display:inline-block;
+  //margin: auto;
 }
