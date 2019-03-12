@@ -4,6 +4,9 @@ import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent, MatChipInputEvent } from '@angular/material';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { Company } from './company';
+import { CompaniesService } from './companies.service';
+
 
 @Component({
   selector: 'app-links-section',
@@ -11,28 +14,7 @@ import { map, startWith } from 'rxjs/operators';
   styleUrls: ['./links-section.component.scss']
 })
 export class LinksSectionComponent implements OnInit {
-	companies = [
-		{
-			name: "KFS",
-			url: "kfs.se",
-			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot",
-			tags: [
-				"plugg",
-				"fest"
-			]
-		},
-		{
-			name: "KFS",
-			url: "kfs.se",
-			text: "lorem ipsumasd naskldnsa ödknas dölkasndlkasnd laksöndlaskndaslkjdasjkd skljfb sakdjhas kdjasdasdasdasd asdsal kjdnasl kjdnsakj dnalskjnd kasljnd askjdn aksljndsa kldnsakl jdnksand kjlasndkas",
-			pictureUrl: "kfs.se/nångot",
-			tags: [
-				"plugg",
-				"boende"
-			]
-		}
-	];
+	companies: Array<Company>;
 
 	visible = true;
   selectable = true;
@@ -41,30 +23,15 @@ export class LinksSectionComponent implements OnInit {
   separatorKeysCodes: number[] = [ENTER, COMMA];
   tagCtrl = new FormControl();
   filteredTags: Observable<string[]>;
-  tags: any = [];
-  allTags: any = [
-    {
-      id: 1,
-      name: 'boende'
-    },
-    {
-      id: 2,
-      name: 'fest'
-    },
-    {
-      id: 3,
-      name: 'skola'
-    },
-    {
-      id: 4,
-      name: 'övrigt'
-    }
-  ];
+  tags: Array<{name: string, id: number}> = [];
+  allTags: Array<{name: string, id: number}>;
 
   @ViewChild('tagInput') tagInput: ElementRef;
 	placeholder = "Filtrera på taggar"
 
-  constructor() {
+  constructor(companiesService: CompaniesService) {
+    this.allTags = companiesService.getTags()
+    this.companies = companiesService.getCompanies()
   	this.filteredTags = this.tagCtrl.valueChanges.pipe(
       startWith(null),
       map((tag: string | null) => tag ? this._filter(tag) : this.allTags.slice()));

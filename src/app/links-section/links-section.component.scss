@@ -12,7 +12,7 @@
 }
 
 .card-deck-container {
-  width: 100%;
+  width: 70vw;
   max-width: 1200px;
   position: relative;
   border-radius: 2px;
@@ -22,4 +22,21 @@
 
 .card-item {
   padding: 3px 3px 3px 3px;
+}
+
+.chip-skola {
+  background-color: #99ccff;
+}
+
+.chip-övrigt {
+  background-color: #ffdd99;
+}
+
+.chip-fest {
+  background-color: #f280a1;
+}
+
+.chip-boende {
+  background-color: #aaff80;
+
 }
