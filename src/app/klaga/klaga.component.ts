@@ -8,21 +8,25 @@ import { FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angula
   styleUrls: ['./klaga.component.scss']
 })
 export class KlagaComponent implements OnInit {
-  signupForm: FormGroup;
-  names: string = "";
-  errends: string = "";
-  mails: string = "";
+  form: FormGroup;
+
   constructor(private frmbuilder: FormBuilder) {
-    this.signupForm = frmbuilder.group({
-      name: new FormControl(),
-      errend: new FormControl(),
-      mail: new FormControl()
+    this.form = frmbuilder.group({
+      name: "",
+      issue: "",
+      email: ""
     });
+
+    this.form.valueChanges.subscribe(changes => {
+      this.form.get("email").setValidators(Validators.email)
+    })
   }
+
   ngOnInit() {
   }
-  PostData(signupForm: NgForm) {
-    console.log(signupForm.controls);
+
+  postData(form: NgForm) {
+    console.log(form.controls);
   }
 
 }

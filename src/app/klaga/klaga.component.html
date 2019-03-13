@@ -1,32 +1,20 @@
-<div>
-  <form [formGroup]='signupForm' (ngSubmit)="PostData(signupForm)">
-    <div class="form-container">
-      <div class="row columns">
-        <div>
-          <p>
-            Namn:
-          <input type="text" formControlName='name' placeholder="Namn">
-          </p>
-        </div>
-        <div>
-          <br>
-          <p>
-            Ärrende:
-            <input type="text" formControlName='errend' placeholder="Ärrende">
-          </p>
-        </div>
-        <br>
-        <div>
-          <p>
-            Din mail:
-            <input type="text" formControlName='mail' placeholder="Din mail">
-          </p>
-        </div>
-        <br>
-        <div>
-          <input type="Submit" value="Post Data">
-        </div>
-      </div>
-    </div>
+<div class="form-container" fxLayout="row" fxLayoutAlign="center center">
+  <form class="form" fxLayout="column" [formGroup]='form' (ngSubmit)="postData(signupForm)">
+    <h1 class="md-display-3">Formulär för klagomålsrapportering</h1>
+    <mat-form-field>
+      <input matInput [formControl]="form.get('name')" placeholder="Namn">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput [formControl]="form.get('issue')" placeholder="Ärende" required></textarea>
+      <mat-error *ngIf="form.get('issue').hasError('required')">Du måste fylla i vad ärendet handlar om .</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [formControl]="form.get('email')" placeholder="Email">
+      <mat-error *ngIf="form.get('email').hasError('email')">Ej giltig email.</mat-error>
+    </mat-form-field>
+
+    <input mat-button type="submit" />
   </form>
 </div>
