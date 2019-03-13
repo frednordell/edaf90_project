@@ -1,7 +1,10 @@
 div.picture {
-	background-image: url("nollning.jpg");
-    background-position: center top;
-    height: 50vh;
+	background: url("./nollning.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 50vh;
 	width: 100%;
 }
 

@@ -1,7 +1,13 @@
 .form{
 	width: 50vw;
+	height: 50%;
 }
 
 .form-container {
-		height: 70vh;
+	background: url(../../assets/dsek_header_notext.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	height: 76.5vh;
 }

@@ -1,20 +1,25 @@
 <div class="form-container" fxLayout="row" fxLayoutAlign="center center">
-  <form class="form" fxLayout="column" [formGroup]='form' (ngSubmit)="postData(signupForm)">
+  <form class="form mat-card" fxLayout="column" fxLayoutAlign="baseline center" [formGroup]='form' (ngSubmit)="postData(form)">
     <h1 class="md-display-3">Formulär för klagomålsrapportering</h1>
-    <mat-form-field>
-      <input matInput [formControl]="form.get('name')" placeholder="Namn">
-    </mat-form-field>
+    <span fxFlex="5"></span>
+    <div fxLayout="row" fxLayoutAlign="center center" style="width: 100%">
+      <mat-form-field>
+        <input matInput [formControl]="form.get('name')" placeholder="Namn">
+      </mat-form-field>
+      <span fxFlex="5"></span>
+      <mat-form-field>
+        <input matInput [formControl]="form.get('email')" placeholder="Email">
+        <mat-error *ngIf="form.get('email').hasError('email')">Ej giltig email.</mat-error>
+      </mat-form-field>
+    </div>
+    
+    <div fxLayout="row" style="width: 100%" fxFlex="30" fxLayoutAlign="center stretch">
+      <mat-form-field fxFlex="60">
+        <textarea rows="5" matInput [formControl]="form.get('issue')" placeholder="Ärende" required></textarea>
+        <mat-error *ngIf="form.get('issue').hasError('required')">Du måste fylla i vad ärendet handlar om.</mat-error>
+      </mat-form-field>
+    </div>
 
-    <mat-form-field>
-      <textarea matInput [formControl]="form.get('issue')" placeholder="Ärende" required></textarea>
-      <mat-error *ngIf="form.get('issue').hasError('required')">Du måste fylla i vad ärendet handlar om .</mat-error>
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput [formControl]="form.get('email')" placeholder="Email">
-      <mat-error *ngIf="form.get('email').hasError('email')">Ej giltig email.</mat-error>
-    </mat-form-field>
-
-    <input mat-button type="submit" />
+    <button fxFlex="nogrow" mat-flat-button [disabled]="!form.valid" type="submit">Skicka</button>
   </form>
 </div>

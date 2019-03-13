@@ -26,7 +26,7 @@ export class KlagaComponent implements OnInit {
   }
 
   postData(form: NgForm) {
-    console.log(form.controls);
+    console.log(form);
   }
 
 }
