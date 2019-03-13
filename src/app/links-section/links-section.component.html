@@ -1,11 +1,11 @@
 <div class="links-section section" fxLayout="column" fxLayoutAlign=" center">
-	<h3 class="mat-display-3">Bra att ha länkar</h3>
+	<h3 class="mat-display-3">Bra-att-ha länkar</h3>
 	<div fxLayout="column" fxLayoutAlign="center">
 		<div fxLayout="row" fxLayoutAlign="center center">
 			<mat-icon class="grey-text">search</mat-icon>
 			<mat-form-field class="example-chip-list" fxFlex="100">
 		    <mat-chip-list #chipList>
-		        <mat-chip *ngFor="let tag of tags;let indx=index;" [selectable]="selectable" [removable]="removable" (removed)="remove(tag,indx)">
+		        <mat-chip *ngFor="let tag of tags;let indx=index;" [ngClass]="'chip-' + tag.name" [selectable]="selectable" [removable]="removable" (removed)="remove(tag,indx)">
 		            {{tag.name | titlecase}}
 		            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
 		        </mat-chip>
@@ -19,15 +19,14 @@
 		    </mat-autocomplete>
 		</mat-form-field>
 		</div>
-		{{tags|json}}
 		<div fxLayout="row wrap" fxFlex.md="70" class="card-deck-container">
-       <div fxFlex *ngFor="let company of companies | filterByTags:filteredTags" class="card-item">
+       <div fxFlex *ngFor="let company of companies | filterByTags:tags" class="card-item">
          <mat-card class="company-card">
 	  			<mat-card-header>
 	  			  <mat-card-title>{{company.name}}</mat-card-title>
 	  			  <span fxFlex></span>
 	  			  <mat-chip-list>
-  						<mat-chip *ngFor="let tag of company.tags">{{tag | titlecase}}</mat-chip>
+  						<mat-chip *ngFor="let tag of company.tags" [ngClass]="'chip-' + tag">{{tag | titlecase}}</mat-chip>
 						</mat-chip-list>
 	  			</mat-card-header>
 	  			<img mat-card-image src="{{company.pictureUrl}}" alt="Photo of a Shiba Inu">
