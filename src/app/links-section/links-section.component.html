@@ -20,7 +20,7 @@
 		</mat-form-field>
 		</div>
 		<div fxLayout="row wrap" fxFlex.md="70" class="card-deck-container">
-       <div fxFlex *ngFor="let company of companies | filterByTags:tags" class="card-item">
+       <div *ngFor="let company of companies | filterByTags:tags" class="card-item">
          <mat-card class="company-card">
 	  			<mat-card-header>
 	  			  <mat-card-title>{{company.name}}</mat-card-title>
@@ -36,7 +36,7 @@
 	  			    </p>
   			  </mat-card-content>
   			  <mat-card-actions>
-  			    <a mat-button href={{company.url}}>Link</a>
+  			    <a mat-button href="https://{{company.url}}" target="_blank">Link</a>
   			  </mat-card-actions>
 	  		</mat-card>
        </div>

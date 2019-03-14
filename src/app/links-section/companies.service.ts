@@ -27,7 +27,7 @@ export class CompaniesService {
 	mockComapnies = [
 		{
 			name: "KFS",
-			url: "kfs.se",
+			url: "kfsab.se",
 			text: "KFS Studentbokhandel ägs till 100 % av Teknologkåren vid LTH och finns fysiskt på Studiecentrum mittemot Kårhuset. Målsättningen för KFS är att det ska finnas litteratur till studenter på LTH till förmånliga priser. KFS har kommissionsförsäljning av begagnade böcker. KFS vill göra det enkelt för studenterna att införskaffa kurslitteratur och annat studiematerial under parollen ”one shop, one stop”. KFS har anpassade öppettider anpassade efter LTHs kursplan. Erbjudande under nolleveckan: handla för 700 kr och få gratis ett 5-pack kollegieblock. KFS är en kontantfri butik",
 			pictureUrl: "http://nolla.nu/2018/innan/img/KFS_logga.png",
 			tags: [
@@ -37,7 +37,7 @@ export class CompaniesService {
 		},
 		{
 			name: "KFS",
-			url: "kfs.se",
+			url: "kfsab.se",
       text: "KFS Studentbokhandel ägs till 100 % av Teknologkåren vid LTH och finns fysiskt på Studiecentrum mittemot Kårhuset. Målsättningen för KFS är att det ska finnas litteratur till studenter på LTH till förmånliga priser. KFS har kommissionsförsäljning av begagnade böcker. KFS vill göra det enkelt för studenterna att införskaffa kurslitteratur och annat studiematerial under parollen ”one shop, one stop”. KFS har anpassade öppettider anpassade efter LTHs kursplan. Erbjudande under nolleveckan: handla för 700 kr och få gratis ett 5-pack kollegieblock. KFS är en kontantfri butik",
 			pictureUrl: "http://nolla.nu/2018/innan/img/KFS_logga.png",
 			tags: [
@@ -47,7 +47,7 @@ export class CompaniesService {
 		},
     {
       name: "KFS",
-      url: "kfs.se",
+      url: "kfsab.se",
       text: "KFS Studentbokhandel ägs till 100 % av Teknologkåren vid LTH och finns fysiskt på Studiecentrum mittemot Kårhuset. Målsättningen för KFS är att det ska finnas litteratur till studenter på LTH till förmånliga priser. KFS har kommissionsförsäljning av begagnade böcker. KFS vill göra det enkelt för studenterna att införskaffa kurslitteratur och annat studiematerial under parollen ”one shop, one stop”. KFS har anpassade öppettider anpassade efter LTHs kursplan. Erbjudande under nolleveckan: handla för 700 kr och få gratis ett 5-pack kollegieblock. KFS är en kontantfri butik",
       pictureUrl: "http://nolla.nu/2018/innan/img/KFS_logga.png",
       tags: [
@@ -57,7 +57,7 @@ export class CompaniesService {
     },
     {
       name: "KFS",
-      url: "kfs.se",
+      url: "kfsab.se",
       text: "KFS Studentbokhandel ägs till 100 % av Teknologkåren vid LTH och finns fysiskt på Studiecentrum mittemot Kårhuset. Målsättningen för KFS är att det ska finnas litteratur till studenter på LTH till förmånliga priser. KFS har kommissionsförsäljning av begagnade böcker. KFS vill göra det enkelt för studenterna att införskaffa kurslitteratur och annat studiematerial under parollen ”one shop, one stop”. KFS har anpassade öppettider anpassade efter LTHs kursplan. Erbjudande under nolleveckan: handla för 700 kr och få gratis ett 5-pack kollegieblock. KFS är en kontantfri butik",
       pictureUrl: "http://nolla.nu/2018/innan/img/KFS_logga.png",
       tags: [
@@ -66,7 +66,7 @@ export class CompaniesService {
     },
     {
       name: "KFS",
-      url: "kfs.se",
+      url: "kfsab.se",
       text: "KFS Studentbokhandel ägs till 100 % av Teknologkåren vid LTH och finns fysiskt på Studiecentrum mittemot Kårhuset. Målsättningen för KFS är att det ska finnas litteratur till studenter på LTH till förmånliga priser. KFS har kommissionsförsäljning av begagnade böcker. KFS vill göra det enkelt för studenterna att införskaffa kurslitteratur och annat studiematerial under parollen ”one shop, one stop”. KFS har anpassade öppettider anpassade efter LTHs kursplan. Erbjudande under nolleveckan: handla för 700 kr och få gratis ett 5-pack kollegieblock. KFS är en kontantfri butik",
       pictureUrl: "http://nolla.nu/2018/innan/img/KFS_logga.png",
       tags: [
@@ -75,7 +75,7 @@ export class CompaniesService {
     },
     {
       name: "KFS",
-      url: "kfs.se",
+      url: "kfsab.se",
       text: "KFS Studentbokhandel ägs till 100 % av Teknologkåren vid LTH och finns fysiskt på Studiecentrum mittemot Kårhuset. Målsättningen för KFS är att det ska finnas litteratur till studenter på LTH till förmånliga priser. KFS har kommissionsförsäljning av begagnade böcker. KFS vill göra det enkelt för studenterna att införskaffa kurslitteratur och annat studiematerial under parollen ”one shop, one stop”. KFS har anpassade öppettider anpassade efter LTHs kursplan. Erbjudande under nolleveckan: handla för 700 kr och få gratis ett 5-pack kollegieblock. KFS är en kontantfri butik",
       pictureUrl: "http://nolla.nu/2018/innan/img/KFS_logga.png",
       tags: [
@@ -84,7 +84,7 @@ export class CompaniesService {
     },
     {
       name: "KFS",
-      url: "kfs.se",
+      url: "kfsab.se",
       text: "KFS Studentbokhandel ägs till 100 % av Teknologkåren vid LTH och finns fysiskt på Studiecentrum mittemot Kårhuset. Målsättningen för KFS är att det ska finnas litteratur till studenter på LTH till förmånliga priser. KFS har kommissionsförsäljning av begagnade böcker. KFS vill göra det enkelt för studenterna att införskaffa kurslitteratur och annat studiematerial under parollen ”one shop, one stop”. KFS har anpassade öppettider anpassade efter LTHs kursplan. Erbjudande under nolleveckan: handla för 700 kr och få gratis ett 5-pack kollegieblock. KFS är en kontantfri butik",
       pictureUrl: "http://nolla.nu/2018/innan/img/KFS_logga.png",
       tags: [
@@ -93,7 +93,7 @@ export class CompaniesService {
     },
     {
       name: "KFS",
-      url: "kfs.se",
+      url: "kfsab.se",
       text: "KFS Studentbokhandel ägs till 100 % av Teknologkåren vid LTH och finns fysiskt på Studiecentrum mittemot Kårhuset. Målsättningen för KFS är att det ska finnas litteratur till studenter på LTH till förmånliga priser. KFS har kommissionsförsäljning av begagnade böcker. KFS vill göra det enkelt för studenterna att införskaffa kurslitteratur och annat studiematerial under parollen ”one shop, one stop”. KFS har anpassade öppettider anpassade efter LTHs kursplan. Erbjudande under nolleveckan: handla för 700 kr och få gratis ett 5-pack kollegieblock. KFS är en kontantfri butik",
       pictureUrl: "http://nolla.nu/2018/innan/img/KFS_logga.png",
       tags: [

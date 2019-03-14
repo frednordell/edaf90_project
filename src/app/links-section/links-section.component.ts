@@ -4,7 +4,7 @@ import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent, MatChipInputEvent } from '@angular/material';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { Company } from './company';
+import { Company } from '../../models/company';
 import { CompaniesService } from './companies.service';
 
 
