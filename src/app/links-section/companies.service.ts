@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompaniesService {
 
-	mockTags = [
+	private mockTags = of(
     {
       id: 1,
       name: 'boende'
@@ -22,9 +23,9 @@ export class CompaniesService {
       id: 4,
       name: 'övrigt'
     }
-  ]
+  );
 
-	mockComapnies = [
+	private mockComapnies = of(
 		{
 			name: "KFS",
 			url: "kfsab.se",
@@ -100,7 +101,7 @@ export class CompaniesService {
         "övrigt"
       ]
     }
-	]
+	)
 
   constructor() { }
 

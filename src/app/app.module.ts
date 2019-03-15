@@ -72,7 +72,7 @@ import { InternationalComponent } from './international/international.component'
     MatSortModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCyC93bo2IxBifjOMWrgDR_wSQKm5lGG0M'
+      apiKey: ''
     }),
 
   ],

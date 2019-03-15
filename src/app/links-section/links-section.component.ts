@@ -14,7 +14,7 @@ import { CompaniesService } from './companies.service';
   styleUrls: ['./links-section.component.scss']
 })
 export class LinksSectionComponent implements OnInit {
-	companies: Array<Company>;
+	companies: Array<Company> = [];
 
 	visible = true;
   selectable = true;
@@ -24,19 +24,21 @@ export class LinksSectionComponent implements OnInit {
   tagCtrl = new FormControl();
   filteredTags: Observable<string[]>;
   tags: Array<{name: string, id: number}> = [];
-  allTags: Array<{name: string, id: number}>;
+  allTags: Array<{name: string, id: number}> = [];
 
   @ViewChild('tagInput') tagInput: ElementRef;
 	placeholder = "Filtrera på taggar"
 
-  constructor(companiesService: CompaniesService) {
-    this.allTags = companiesService.getTags()
-    this.companies = companiesService.getCompanies()
+  constructor(private companiesService: CompaniesService) {
   	this.filteredTags = this.tagCtrl.valueChanges.pipe(
       startWith(null),
       map((tag: string | null) => tag ? this._filter(tag) : this.allTags.slice()));
   }
 
+  ngOnInit() {
+    this.companiesService.getTags().subscribe((tag) => this.allTags.push(tag))
+    this.companiesService.getCompanies().subscribe((company) => this.companies.push(company))
+  }
 
    add(event: MatChipInputEvent): void {
     const input = event.input;
@@ -70,9 +72,6 @@ export class LinksSectionComponent implements OnInit {
   private _filter(value: any): any[] {
   	const name = value.name || value
     return this.allTags.filter(tag => tag.name.toLowerCase().includes(name.toLowerCase()));;
-  }
-
-  ngOnInit() {
   }
 
 }
